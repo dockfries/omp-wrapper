@@ -20,6 +20,7 @@
     "pawn",
     "wrapper"
   ],
+  "prepare": "npm run build",
   "author": "YuCarl77",
   "license": "ISC",
   "devDependencies": {
