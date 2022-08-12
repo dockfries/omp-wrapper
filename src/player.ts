@@ -8,8 +8,8 @@ import { IQuat } from "./interfaces/Quat";
 export const TogglePlayerWidescreen = (
   playerid: number,
   set: boolean
-): void => {
-  samp.callNative("TogglePlayerWidescreen", "ii", playerid, set);
+): number => {
+  return samp.callNative("TogglePlayerWidescreen", "ii", playerid, set);
 };
 
 export const IsPlayerWidescreenToggled = (playerid: number): boolean => {
@@ -178,8 +178,8 @@ export const IsPlayerCameraTargetEnabled = (playerid: number): boolean => {
 export const TogglePlayerGhostMode = (
   playerid: number,
   toggle: boolean
-): void => {
-  samp.callNative("TogglePlayerGhostMode", "ii", playerid, toggle);
+): number => {
+  return samp.callNative("TogglePlayerGhostMode", "ii", playerid, toggle);
 };
 
 export const GetPlayerGhostMode = (playerid: number): boolean => {
@@ -236,8 +236,15 @@ export const SendClientMessagef = (
   color: number,
   message: string,
   ...args: Array<any>
-): void => {
-  samp.callNative("SendClientMessagef", "iisa", playerid, color, message, args);
+): number => {
+  return samp.callNative(
+    "SendClientMessagef",
+    "iisa",
+    playerid,
+    color,
+    message,
+    args
+  );
 };
 
 export const GameTextForPlayerf = (
@@ -246,8 +253,8 @@ export const GameTextForPlayerf = (
   style: number,
   message: string,
   ...args: Array<any>
-): void => {
-  samp.callNative(
+): number => {
+  return samp.callNative(
     "GameTextForPlayerf",
     "iiisa",
     playerid,
@@ -263,8 +270,8 @@ export const SendPlayerMessageToPlayerf = (
   senderid: number,
   message: string,
   ...args: Array<any>
-): void => {
-  samp.callNative(
+): number => {
+  return samp.callNative(
     "SendPlayerMessageToPlayerf",
     "iisa",
     playerid,
@@ -277,6 +284,10 @@ export const SendPlayerMessageToPlayerf = (
 export const RemovePlayerWeapon = (
   playerid: number,
   weaponid: number
-): void => {
-  samp.callNative("RemovePlayerWeapon", "ii", playerid, weaponid);
+): number => {
+  return samp.callNative("RemovePlayerWeapon", "ii", playerid, weaponid);
+};
+
+export const HidePlayerDialog = (playerid: number): number => {
+  return samp.callNative("HidePlayerDialog", "i", playerid);
 };
