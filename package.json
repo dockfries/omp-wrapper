@@ -1,6 +1,6 @@
 {
   "name": "omp-wrapper",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A wrapper of the omp new scripting api (natives and callbacks) for samp-node.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -54,6 +54,10 @@ export const GetPlayerSkillLevel = (
   return samp.callNative("GetPlayerSkillLevel", "ii", playerid, skill);
 };
 
+export const GetPlayerWeather = (playerid: number): number => {
+  return samp.callNative("GetPlayerWeather", "i", playerid);
+};
+
 export const IsPlayerCheckpointActive = (playerid: number): boolean => {
   return Boolean(samp.callNative("IsPlayerCheckpointActive", "i", playerid));
 };
