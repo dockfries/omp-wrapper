@@ -39,7 +39,7 @@ export const SetPickupPos = (
   X: number,
   Y: number,
   Z: number,
-  update: boolean = true
+  update = true
 ): number => {
   return samp.callNative("SetPickupPos", "ifffi", pickupid, X, Y, Z, update);
 };
@@ -47,7 +47,7 @@ export const SetPickupPos = (
 export const SetPickupModel = (
   pickupid: number,
   model: number,
-  update: boolean = true
+  update = true
 ): number => {
   return samp.callNative("SetPickupModel", "iii", pickupid, model, update);
 };
@@ -55,7 +55,7 @@ export const SetPickupModel = (
 export const SetPickupType = (
   pickupid: number,
   type: number,
-  update: boolean = true
+  update = true
 ): number => {
   return samp.callNative("SetPickupType", "iii", pickupid, type, update);
 };

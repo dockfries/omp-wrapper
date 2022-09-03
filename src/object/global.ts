@@ -100,7 +100,7 @@ export const GetObjectMaterialText = (
   objectid: number,
   materialindex: number
 ): IMaterialText => {
-  let [
+  const [
     text,
     materialsize = 0,
     fontface,

@@ -15,8 +15,8 @@ export const SetVehicleSpawnInfo = (
   fAngle: number,
   color1: number,
   color2: number,
-  respawntime: number = -2,
-  interior: number = -2
+  respawntime = -2,
+  interior = -2
 ): number => {
   return samp.callNative(
     "SetVehicleSpawnInfo",
@@ -107,6 +107,14 @@ export const IsVehicleSirenEnabled = (vehicleid: number): boolean => {
 
 export const GetVehicleModelCount = (modelid: number): number => {
   return samp.callNative("GetVehicleModelCount", "i", modelid);
+};
+
+export const GetVehicleLastDriver = (vehicleid: number): number => {
+  return samp.callNative("GetVehicleLastDriver", "i", vehicleid);
+};
+
+export const GetVehicleDriver = (vehicleid: number): number => {
+  return samp.callNative("GetVehicleDriver", "i", vehicleid);
 };
 
 export const GetVehicleModelsUsed = (): number => {
