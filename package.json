@@ -1,11 +1,13 @@
 {
   "name": "omp-wrapper",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A wrapper of the omp new scripting api (natives and callbacks) for samp-node.",
   "main": "dist/bundle.js",
   "types": "dist/bundle.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "lint": "eslint --fix ./src",
+    "build": "npm run lint && rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,9 @@
   "license": "ISC",
   "devDependencies": {
     "@sa-mp/node": "^0.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
     "rollup": "^2.77.2",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^4.2.2",
