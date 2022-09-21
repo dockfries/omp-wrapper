@@ -5,6 +5,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "types": ["@sa-mp/node"],
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

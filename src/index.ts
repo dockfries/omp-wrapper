@@ -21,3 +21,4 @@ export * from "./textdraw/player";
 export * from "./textdraw/global";
 export * from "./vehicle";
 export * from "./weapons";
+export * from "./interfaces";
