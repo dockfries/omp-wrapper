@@ -78,12 +78,12 @@ export const GetVehicleOccupiedTick = (vehicleid: number): number => {
   return samp.callNative("GetVehicleOccupiedTick", "i", vehicleid);
 };
 
-export const HasVehicleBeenOccupied = (vehicleid: number): number => {
-  return samp.callNative("HasVehicleBeenOccupied", "i", vehicleid);
+export const HasVehicleBeenOccupied = (vehicleid: number): boolean => {
+  return Boolean(samp.callNative("HasVehicleBeenOccupied", "i", vehicleid));
 };
 
-export const IsVehicleOccupied = (vehicleid: number): number => {
-  return samp.callNative("IsVehicleOccupied", "i", vehicleid);
+export const IsVehicleOccupied = (vehicleid: number): boolean => {
+  return Boolean(samp.callNative("IsVehicleOccupied", "i", vehicleid));
 };
 
 export const GetVehicleRespawnTick = (vehicleid: number): number => {

@@ -1,5 +1,5 @@
 /* 
-  https://gist.github.com/AmyrAhmady/94a33fc502c2694032523969e7d2ee02
+  https://github.com/openmultiplayer/server-beta/blob/master/omp.inc
   new scripting api (natives and callbacks);
 */
 export * from "./3dText/global";
