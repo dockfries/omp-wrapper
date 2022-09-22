@@ -6,6 +6,3 @@ export const OnPlayerEnterGangZone = (fn: GangZoneCb) => {
 export const OnPlayerLeaveGangZone = (fn: GangZoneCb) => {
   samp.on("OnPlayerLeaveGangZone", fn);
 };
-export const OnPlayerClickGangZone = (fn: GangZoneCb) => {
-  samp.on("OnPlayerClickGangZone", fn);
-};
