@@ -24,7 +24,7 @@ export const GetMenuPos = (menuid: number) => {
 };
 
 export const GetMenuColumnWidth = (menuid: number) => {
-  const [fColumn1 = 0.0, fColumn2 = 0.0] = samp.callNative(
+  const [fColumn1 = 0.0, fColumn2 = 0.0]: number[] = samp.callNative(
     "GetMenuColumnWidth",
     "iFF",
     menuid
