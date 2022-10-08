@@ -8,4 +8,4 @@ src/
 rollup.config.js
 tsconfig.json
 pnpm-lock.yaml
-LICENSE.md
+LICENSE
