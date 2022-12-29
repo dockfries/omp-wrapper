@@ -1,5 +1,4 @@
 import esbuild from "rollup-plugin-esbuild";
-import { typescriptPaths } from "rollup-plugin-typescript-paths";
 import del from "rollup-plugin-delete";
 import dts from "rollup-plugin-dts";
 
@@ -12,11 +11,7 @@ export default [
       file: outputPath + "/bundle.js",
       format: "cjs",
     },
-    plugins: [
-      del({ targets: outputPath + "/*" }),
-      esbuild({ minify: true }),
-      typescriptPaths({ preserveExtensions: true }),
-    ],
+    plugins: [del({ targets: outputPath + "/*" }), esbuild({ minify: true })],
   },
   {
     input: "./src/index.ts",
