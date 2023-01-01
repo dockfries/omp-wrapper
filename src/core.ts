@@ -78,3 +78,27 @@ export const SendRconCommandf = (
 export const GetRunningTimers = (): number => {
   return samp.callNative("GetRunningTimers", "");
 };
+
+export const AllowAdminTeleport = (allow: boolean) => {
+  samp.callNative("AllowAdminTeleport", "i", allow);
+};
+
+export const IsAdminTeleportAllowed = (): boolean => {
+  return Boolean(samp.callNative("IsAdminTeleportAllowed", ""));
+};
+
+export const AllowInteriorWeapons = (allow: boolean) => {
+  samp.callNative("AllowInteriorWeapons", "i", allow);
+};
+
+export const AreInteriorWeaponsAllowed = (): boolean => {
+  return Boolean(samp.callNative("AreInteriorWeaponsAllowed", ""));
+};
+
+export const AreAllAnimationsEnabled = () => {
+  return Boolean(samp.callNative("AreAllAnimationsEnabled", ""));
+};
+
+export const EnableAllAnimations = (enable: boolean) => {
+  samp.callNative("EnableAllAnimations", "i", enable);
+};

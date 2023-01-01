@@ -295,3 +295,29 @@ export const RemovePlayerWeapon = (
 export const HidePlayerDialog = (playerid: number): number => {
   return samp.callNative("HidePlayerDialog", "i", playerid);
 };
+
+export const IsPlayerUsingOfficialClient = (playerid: number): boolean => {
+  return Boolean(samp.callNative("IsPlayerUsingOfficialClient", "i", playerid));
+};
+
+export const AllowPlayerTeleport = (
+  playerid: number,
+  allow: boolean
+): boolean => {
+  return Boolean(samp.callNative("AllowPlayerTeleport", "ii", playerid, allow));
+};
+
+export const IsPlayerTeleportAllowed = (playerid: number): boolean => {
+  return Boolean(samp.callNative("IsPlayerTeleportAllowed", "i", playerid));
+};
+
+export const AllowPlayerWeapons = (
+  playerid: number,
+  allow: boolean
+): boolean => {
+  return Boolean(samp.callNative("AllowPlayerWeapons", "i", playerid, allow));
+};
+
+export const ArePlayerWeaponsAllowed = (playerid: number): boolean => {
+  return Boolean(samp.callNative("ArePlayerWeaponsAllowed", "i", playerid));
+};

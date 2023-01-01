@@ -1,6 +1,6 @@
 {
   "name": "omp-wrapper",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "A functional wrapper of the omp new scripting api (natives and callbacks) for samp-node.",
   "main": "dist/bundle.js",
   "types": "dist/bundle.d.ts",
@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
     "esbuild": "^0.15.18",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "husky": "^8.0.2",
     "rollup": "^3.9.0",
     "rollup-plugin-delete": "^2.0.0",
