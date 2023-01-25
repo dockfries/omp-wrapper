@@ -14,15 +14,6 @@ export const GetObjectMoveSpeed = (objectid: number): number => {
   return samp.callNativeFloat("GetObjectMoveSpeed", "i", objectid);
 };
 
-export const GetObjectTarget = (objectid: number): IObjectPos => {
-  const [fX = 0.0, fY = 0.0, fZ = 0.0]: number[] = samp.callNative(
-    "GetObjectTarget",
-    "i",
-    objectid
-  );
-  return { fX, fY, fZ };
-};
-
 export const GetObjectMovingTargetPos = (objectid: number): IObjectPos => {
   const [fX = 0.0, fY = 0.0, fZ = 0.0]: number[] = samp.callNative(
     "GetObjectMovingTargetPos",
@@ -130,6 +121,6 @@ export const GetObjectMaterialText = (
   };
 };
 
-export const IsObjectNoCameraCol = (objectid: number): boolean => {
-  return Boolean(samp.callNative("IsObjectNoCameraCol", "i", objectid));
+export const HasObjectCameraCollision = (objectid: number): boolean => {
+  return Boolean(samp.callNative("HasObjectCameraCollision", "i", objectid));
 };

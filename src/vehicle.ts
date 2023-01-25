@@ -34,9 +34,9 @@ export const SetVehicleSpawnInfo = (
   );
 };
 
-export const GetVehicleColor = (vehicleid: number): IVehColor => {
+export const GetVehicleColours = (vehicleid: number): IVehColor => {
   const [color1 = 0, color2 = 0]: number[] = samp.callNative(
-    "GetVehicleColor",
+    "GetVehicleColours",
     "i",
     vehicleid
   );
@@ -64,10 +64,6 @@ export const SetVehicleRespawnDelay = (
 
 export const GetVehicleRespawnDelay = (vehicleid: number): number => {
   return samp.callNative("GetVehicleRespawnDelay", "i", vehicleid);
-};
-
-export const GetVehicleTower = (vehicleid: number): number => {
-  return samp.callNative("GetVehicleTower", "i", vehicleid);
 };
 
 export const GetVehicleCab = (vehicleid: number): number => {

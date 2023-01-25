@@ -77,31 +77,31 @@ export const PlayerTextDrawGetPos = (
   return { fX, fY };
 };
 
-export const PlayerTextDrawGetColor = (
+export const PlayerTextDrawGetColour = (
   playerid: number,
   textdrawid: number
 ): number => {
-  return samp.callNative("PlayerTextDrawGetColor", "ii", playerid, textdrawid);
+  return samp.callNative("PlayerTextDrawGetColour", "ii", playerid, textdrawid);
 };
 
-export const PlayerTextDrawGetBoxColor = (
+export const PlayerTextDrawGetBoxColour = (
   playerid: number,
   textdrawid: number
 ): number => {
   return samp.callNative(
-    "PlayerTextDrawGetBoxColor",
+    "PlayerTextDrawGetBoxColour",
     "ii",
     playerid,
     textdrawid
   );
 };
 
-export const PlayerTextDrawGetBackgroundCol = (
+export const PlayerTextDrawGetBackgroundColour = (
   playerid: number,
   textdrawid: number
 ): number => {
   return samp.callNative(
-    "PlayerTextDrawGetBackgroundCol",
+    "PlayerTextDrawGetBackgroundColour",
     "ii",
     playerid,
     textdrawid
@@ -199,12 +199,12 @@ export const PlayerTextDrawGetPreviewRot = (
   return { fRotX, fRotY, fRotZ, fZoom };
 };
 
-export const PlayerTextDrawGetPreviewVehCol = (
+export const PlayerTextDrawGetPreviewVehicleColours = (
   playerid: number,
   textdrawid: number
 ) => {
   const [color1, color2]: number[] = samp.callNative(
-    "PlayerTextDrawGetPreviewVehCol",
+    "PlayerTextDrawGetPreviewVehicleColours",
     "iiII",
     playerid,
     textdrawid

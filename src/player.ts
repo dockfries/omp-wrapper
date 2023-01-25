@@ -235,56 +235,6 @@ export const GetPlayerAttachedObject = (
   };
 };
 
-export const SendClientMessagef = (
-  playerid: number,
-  color: number,
-  message: string,
-  ...args: Array<any>
-): number => {
-  return samp.callNative(
-    "SendClientMessagef",
-    "iisa",
-    playerid,
-    color,
-    message,
-    args
-  );
-};
-
-export const GameTextForPlayerf = (
-  playerid: number,
-  displaytime: number,
-  style: number,
-  message: string,
-  ...args: Array<any>
-): number => {
-  return samp.callNative(
-    "GameTextForPlayerf",
-    "iiisa",
-    playerid,
-    displaytime,
-    style,
-    message,
-    args
-  );
-};
-
-export const SendPlayerMessageToPlayerf = (
-  playerid: number,
-  senderid: number,
-  message: string,
-  ...args: Array<any>
-): number => {
-  return samp.callNative(
-    "SendPlayerMessageToPlayerf",
-    "iisa",
-    playerid,
-    senderid,
-    message,
-    args
-  );
-};
-
 export const RemovePlayerWeapon = (
   playerid: number,
   weaponid: number

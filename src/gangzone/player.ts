@@ -82,18 +82,23 @@ export const IsPlayerGangZoneVisible = (
   );
 };
 
-export const PlayerGangZoneGetColor = (
+export const PlayerGangZoneGetColour = (
   playerid: number,
   zoneid: number
 ): number => {
-  return samp.callNative("PlayerGangZoneGetColor", "ii", playerid, zoneid);
+  return samp.callNative("PlayerGangZoneGetColour", "ii", playerid, zoneid);
 };
 
-export const PlayerGangZoneGetFlashColor = (
+export const PlayerGangZoneGetFlashColour = (
   playerid: number,
   zoneid: number
 ): number => {
-  return samp.callNative("PlayerGangZoneGetFlashColor", "ii", playerid, zoneid);
+  return samp.callNative(
+    "PlayerGangZoneGetFlashColour",
+    "ii",
+    playerid,
+    zoneid
+  );
 };
 
 export const IsPlayerGangZoneFlashing = (

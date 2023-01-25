@@ -16,11 +16,11 @@ export const GetPlayer3DTextLabelText = (
   return samp.callNative("GetPlayer3DTextLabelText", "iiSi", playerid, id, 144);
 };
 
-export const GetPlayer3DTextLabelColor = (
+export const GetPlayer3DTextLabelColour = (
   playerid: number,
   id: number
 ): number => {
-  return samp.callNative("GetPlayer3DTextLabelColor", "ii", playerid, id);
+  return samp.callNative("GetPlayer3DTextLabelColour", "ii", playerid, id);
 };
 
 export const GetPlayer3DTextLabelPos = (
@@ -36,20 +36,26 @@ export const GetPlayer3DTextLabelPos = (
   return { fX, fY, fZ };
 };
 
-export const SetPlayer3DTextLabelDrawDist = (
+export const SetPlayer3DTextLabelDrawDistance = (
   playerid: number,
   id: number,
   dist: number
 ): void => {
-  samp.callNative("SetPlayer3DTextLabelDrawDist", "iii", playerid, id, dist);
+  samp.callNative(
+    "SetPlayer3DTextLabelDrawDistance",
+    "iii",
+    playerid,
+    id,
+    dist
+  );
 };
 
-export const GetPlayer3DTextLabelDrawDist = (
+export const GetPlayer3DTextLabelDrawDistance = (
   playerid: number,
   id: number
 ): number => {
   return samp.callNativeFloat(
-    "GetPlayer3DTextLabelDrawDist",
+    "GetPlayer3DTextLabelDrawDistance",
     "ii",
     playerid,
     id
@@ -73,18 +79,23 @@ export const SetPlayer3DTextLabelLOS = (
   samp.callNative("SetPlayer3DTextLabelLOS", "iii", playerid, id, status);
 };
 
-export const GetPlayer3DTextLabelVirtualW = (
+export const GetPlayer3DTextLabelVirtualWorld = (
   playerid: number,
   id: number
 ): number => {
-  return samp.callNative("GetPlayer3DTextLabelVirtualW", "ii", playerid, id);
+  return samp.callNative(
+    "GetPlayer3DTextLabelVirtualWorld",
+    "ii",
+    playerid,
+    id
+  );
 };
 
-export const GetPlayer3DTextLabelAttached = (
+export const GetPlayer3DTextLabelAttachedData = (
   playerid: number,
   id: number
 ): IAttachedData => {
   const [attached_playerid = 0, attached_vehicleid = 0]: number[] =
-    samp.callNative("GetPlayer3DTextLabelAttached", "ii", playerid, id);
+    samp.callNative("GetPlayer3DTextLabelAttachedData", "ii", playerid, id);
   return { attached_playerid, attached_vehicleid };
 };

@@ -34,49 +34,8 @@ export const RemoveServerRule = (name: string): boolean => {
   return Boolean(samp.callNative("RemoveServerRule", "s", name));
 };
 
-export const SendClientMessageToAllf = (
-  color: number,
-  message: string,
-  ...args: Array<any>
-): void => {
-  samp.callNative("SendClientMessageToAllf", "isv", color, message, args);
-};
-
-export const GameTextForAllf = (
-  color: number,
-  displaytime: number,
-  style: number,
-  message: string,
-  ...args: Array<any>
-): void => {
-  samp.callNative(
-    "GameTextForAllf",
-    "iiisv",
-    color,
-    displaytime,
-    style,
-    message,
-    args
-  );
-};
-
-export const SendPlayerMessageToAllf = (
-  senderid: number,
-  message: string,
-  ...args: Array<any>
-): void => {
-  samp.callNative("SendPlayerMessageToAllf", "isv", senderid, message, args);
-};
-
-export const SendRconCommandf = (
-  command: string,
-  ...args: Array<any>
-): void => {
-  samp.callNative("SendRconCommandf", "sv", command, args);
-};
-
-export const GetRunningTimers = (): number => {
-  return samp.callNative("GetRunningTimers", "");
+export const CountRunningTimers = (): number => {
+  return samp.callNative("CountRunningTimers", "");
 };
 
 export const AllowAdminTeleport = (allow: boolean) => {
