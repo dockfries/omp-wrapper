@@ -1,3 +1,5 @@
+> ⚠️ DEPRECATED: please use [@infernus/wrapper](https://github.com/dockfries/infernus/tree/main/packages/wrapper) instead.
+
 # omp-wrapper
 
 [![npm](https://img.shields.io/npm/v/omp-wrapper)](https://www.npmjs.com/package/omp-wrapper) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/omp-wrapper)
